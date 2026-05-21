@@ -24,7 +24,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onStart }) => {
       >
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full mb-8 border-2 border-indigo-100">
           <Shield className="w-5 h-5" />
-          <span className="font-bold tracking-tight font-ui">資安守護者 | 辦公室互動教學系統</span>
+          <span className="font-bold tracking-tight font-ui">資安守護者 | 互動式資安風險管理訓練系統</span>
         </div>
         
         <h1 className="text-6xl md:text-8xl font-game text-slate-800 mb-6 tracking-tight">
