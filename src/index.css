@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-game: "Fredoka", sans-serif;
+  --font-ui: "Quicksand", sans-serif;
+  --font-sans: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#F8FAFC] text-slate-800 font-ui;
+  }
+}
+
+/* 🎯 核心修正：確保熱點在平時就具備基礎可視度（不被 hover 限制） */
+.hotspot-pulse {
+  animation: pulse 2s infinite;
+  transition: all 0.2s ease-in-out;
+}
+
+/* 🎯 物理大絕招：如果你想讓那個藍色瞄準鏡圖示「完全消失」，只留下遊戲內建的脈衝橘色光圈 */
+/* 如果你想留下藍色圖示，請把下面這段 .hotspot-pulse svg 刪掉即可 */
+.hotspot-pulse svg {
+  display: none !important;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.8); }
+  70% { box-shadow: 0 0 0 18px rgba(245, 158, 11, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+}
+
+.office-bg {
+  background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1));
+  background-color: #E2E8F0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full hover:bg-slate-400 transition-colors;
+}
