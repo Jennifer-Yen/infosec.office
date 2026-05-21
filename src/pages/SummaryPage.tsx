@@ -26,8 +26,8 @@ export const SummaryPage: React.FC<SummaryPageProps> = ({ onRestart }) => {
   };
 
   const getRank = () => {
-    if (completionRate == 1000) return { title: '資安守護大師', icon: '🏆', color: 'text-amber-500', desc: '完美達成任務！你對辦公室資安有著極高的敏銳度。' };
-    if (completionRate >= 800) return { title: '資安專業家', icon: '🌟', color: 'text-indigo-500', desc: '表現優秀！你已經具備處理日常資安風險的能力。' };
+    if (score == 1000) return { title: '資安守護大師', icon: '🏆', color: 'text-amber-500', desc: '完美達成任務！你對辦公室資安有著極高的敏銳度。' };
+    if (score >= 800) return { title: '資安專業家', icon: '🌟', color: 'text-indigo-500', desc: '表現優秀！你已經具備處理日常資安風險的能力。' };
     return { title: '資安見習生', icon: '🌱', color: 'text-slate-500', desc: '還有一些細節可以改進，多練習幾次會更熟練。' };
   };
 
