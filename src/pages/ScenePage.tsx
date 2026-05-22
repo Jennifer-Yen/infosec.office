@@ -228,7 +228,7 @@ export const ScenePage: React.FC<ScenePageProps> = ({ sceneId, onBack }) => {
                 className="bg-white p-8 rounded-[40px] shadow-2xl text-center max-w-lg w-full border-8 border-indigo-50"
               >
                 <div className="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-5 text-3xl">👋</div>
-                <h3 className="text-3xl font-black text-slate-800 mb-4">任務簡報</h3>
+                <h3 className="text-3xl font-black text-slate-800 mb-4">任務說明</h3>
                 
                 <p className="text-sm font-ui text-slate-600 leading-relaxed mb-6 text-left bg-slate-50 p-4 rounded-2xl border">
                   觀察辦公室環境，點擊畫面上可能存在的<span className="text-amber-600 font-bold">資安風險點</span>，找出潛在漏洞！按下方按鈕後將<span className="text-indigo-600 font-bold">開始/繼續計時</span>。

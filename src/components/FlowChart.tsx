@@ -4,16 +4,22 @@ import { ArrowDown, Monitor, User, CheckCircle, XCircle, Info } from 'lucide-rea
 
 export const FlowChart: React.FC = () => {
   const steps = [
-    { from: 'user', text: '進入網頁', icon: <User className="w-4 h-4" /> },
-    { from: 'web', text: '顯示開始畫面', icon: <Monitor className="w-4 h-4" /> },
     { from: 'user', text: '點選 "開始挑戰"', icon: <User className="w-4 h-4" /> },
-    { from: 'web', text: '進入辦公室場景', icon: <Monitor className="w-4 h-4" /> },
+    { from: 'web', text: '進入訓練地圖', icon: <Monitor className="w-4 h-4" /> },
+    { from: 'user', text: '點選欲訓練的關卡', icon: <User className="w-4 h-4" /> },
+    { from: 'web', text: '載入關卡內容', icon: <Monitor className="w-4 h-4" /> },
+    { from: 'web', text: '顯示任務說明', icon: <Monitor className="w-4 h-4" /> },
+    { from: 'user', text: '點選 "開始進行排查"', icon: <User className="w-4 h-4" /> },
+    { from: 'web', text: '啟動計時', icon: <Info className="w-4 h-4" /> },
     { from: 'user', text: '點擊可疑位置', icon: <User className="w-4 h-4" />, highlight: true },
     { from: 'web', text: '判斷風險點並顯示題目', icon: <Info className="w-4 h-4" /> },
     { from: 'user', text: '選擇處置選項', icon: <User className="w-4 h-4" /> , highlight: true },
+    { from: 'user', text: '點選 "取得提示"', icon: <User className="w-4 h-4" /> },
+    { from: 'web', text: '顯示風險點位置', icon: <CheckCircle className="w-4 h-4" /> },
     { from: 'web', text: '顯示正誤回饋與知識', icon: <CheckCircle className="w-4 h-4" /> },
     { from: 'web', text: '更新任務進度與得分', icon: <StarIcon /> },
-    { from: 'web', text: '完成所有點則進入總結', icon: <TrophyIcon /> },
+    { from: 'web', text: '完成該關卡所有風險點則結束計時，並返回訓練地圖', icon: <StarIcon /> },
+    { from: 'web', text: '完成所有關卡則生成結案報告', icon: <TrophyIcon /> },
   ];
 
   return (

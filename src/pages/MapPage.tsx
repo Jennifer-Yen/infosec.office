@@ -54,7 +54,7 @@ export const MapPage: React.FC<MapPageProps> = ({ onSelectScene, onBack, onCompl
                 onClick={onComplete}
                 className="flex-1 md:flex-none px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-game text-lg shadow-lg shadow-indigo-100 transition-all border-b-4 border-indigo-800 active:border-b-0 active:translate-y-1 flex items-center justify-center gap-2 cursor-pointer animate-bounce"
               >
-                生成結案報告 🚀
+                結案報告 🚀
               </button>
             )}
           </div>
