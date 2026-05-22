@@ -50,7 +50,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onStart }) => {
         <div className="mt-20 w-full max-w-2xl mx-auto">
           <h2 className="text-2xl font-game text-slate-800 mb-8 flex items-center justify-center gap-2">
             <Shield className="w-6 h-6 text-indigo-500" />
-            系統互動流程
+            系統使用流程說明
           </h2>
           <FlowChart />
         </div>
