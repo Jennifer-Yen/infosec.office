@@ -14,14 +14,14 @@ interface ScenePageProps {
 }
 
 export const ScenePage: React.FC<ScenePageProps> = ({ sceneId, onBack }) => {
-  // 从 useGame 解构出场景时间、题目与完成纪录
+  // 從 useGame 解構出當前場景的時間紀錄、題目列表、已完成的風險點 ID，以及相關操作函式
   const { completedRiskIds, hintedRiskIds, completeRisk, addHintedRisk, score, questions, updateSceneTime, sceneTimes } = useGame();
   const [selectedRiskId, setSelectedRiskId] = useState<string | null>(null);
   const [showFinishedAlert, setShowFinishedAlert] = useState(false);
   const [currentHintId, setCurrentHintId] = useState<string | null>(null); 
   const [showStartGuide, setShowStartGuide] = useState(true);
 
-  // 历史纪录继承
+  // 歷史紀錄繼承
   const [localSeconds, setLocalSeconds] = useState(() => {
     return sceneTimes[sceneId] || 0;
   });
@@ -36,7 +36,7 @@ export const ScenePage: React.FC<ScenePageProps> = ({ sceneId, onBack }) => {
 
   if (!scene) return <div>Scene not found</div>;
 
-  // 不间断计时器
+  // 不間斷計時器
   useEffect(() => {
     let interval: NodeJS.Timeout | null = null;
     
@@ -51,7 +51,7 @@ export const ScenePage: React.FC<ScenePageProps> = ({ sceneId, onBack }) => {
     };
   }, [showStartGuide, isSceneFinished]); 
 
-  // 中途退出机制
+  // 中途退出機制
   const handleExitScene = () => {
     if (localSeconds > 0) {
       updateSceneTime(sceneId, localSeconds);

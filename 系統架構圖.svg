@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 950" width="100%" height="100%" style="background-color: #f8fafc; font-family: 'Segoe UI', system-ui, sans-serif;">
+  <defs>
+    <linearGradient id="userGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#3730a3" />
+    </linearGradient>
+    <linearGradient id="frontGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f1f5f9" />
+    </linearGradient>
+    <linearGradient id="moduleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff" />
+      <stop offset="100%" stop-color="#dbeafe" />
+    </linearGradient>
+    <linearGradient id="contextGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0e7ff" />
+      <stop offset="100%" stop-color="#c7d2fe" />
+    </linearGradient>
+    <linearGradient id="dataGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdf4" />
+      <stop offset="100%" stop-color="#dcfce7" />
+    </linearGradient>
+    
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1e293b" flood-opacity="0.06" />
+    </filter>
+    <filter id="innerShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feComponentTransfer in="SourceAlpha">
+        <feFuncA type="linear" slope="0.1"/>
+      </feComponentTransfer>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feOffset dx="0" dy="2"/>
+      <feComposite operator="out" in2="SourceGraphic"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.15 0"/>
+      <feBlend mode="multiply" in2="SourceGraphic"/>
+    </filter>
+
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b" />
+    </marker>
+    <marker id="arrowIndigo" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#4f46e5" />
+    </marker>
+  </defs>
+
+  <text x="400" y="45" text-anchor="middle" font-size="24" font-weight="800" fill="#1e293b" letter-spacing="1">CyberWise Office 系統架構圖</text>
+  <text x="400" y="70" text-anchor="middle" font-size="14" font-weight="500" fill="#64748b">互動式資安風險管理訓練系統架構</text>
+
+  <g filter="url(#shadow)">
+    <rect x="275" y="110" width="250" height="60" rx="16" fill="url(#userGrad)" />
+    <text x="400" y="146" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">使用者（User）</text>
+  </g>
+
+  <line x1="400" y1="170" x2="400" y2="212" stroke="#4f46e5" stroke-width="2.5" stroke-dasharray="4 4" marker-end="url(#arrowIndigo)" />
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="220" width="640" height="490" rx="24" fill="url(#frontGrad)" stroke="#e2e8f0" stroke-width="2" />
+    <text x="110" y="255" font-size="16" font-weight="800" fill="#1e293b" letter-spacing="0.5">前端應用層（Frontend SPA）</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="120" y="290" width="160" height="70" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="200" y="323" text-anchor="middle" font-size="14" font-weight="700" fill="#334155">Page Router</text>
+    <text x="200" y="343" text-anchor="middle" font-size="12" font-weight="500" fill="#64748b">( 狀態驅動頁面切換 )</text>
+  </g>
+
+  <line x1="280" y1="325" x2="334" y2="325" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+
+  <g filter="url(#shadow)">
+    <rect x="340" y="280" width="320" height="90" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="500" y="310" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">UI Pages 核心視圖</text>
+    <text x="500" y="335" text-anchor="middle" font-size="12" font-weight="600" fill="#4f46e5">Home 首頁  |  Map 訓練地圖</text>
+    <text x="500" y="355" text-anchor="middle" font-size="12" font-weight="600" fill="#4f46e5">Scene 關卡情境  |  Summary 結算報告</text>
+  </g>
+
+  <line x1="500" y1="370" x2="500" y2="394" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+
+  <g filter="url(#shadow)">
+    <rect x="370" y="400" width="260" height="70" rx="14" fill="url(#moduleGrad)" stroke="#93c5fd" stroke-width="1" />
+    <text x="500" y="428" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Scene Module (場景顯示)</text>
+    <text x="500" y="450" text-anchor="middle" font-size="12" font-weight="500" fill="#1d4ed8">• 2D 背景渲染  • Hotspots 熱點定位</text>
+  </g>
+
+  <line x1="500" y1="470" x2="500" y2="494" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+
+  <g filter="url(#shadow)">
+    <rect x="370" y="500" width="260" height="70" rx="14" fill="url(#moduleGrad)" stroke="#93c5fd" stroke-width="1" />
+    <text x="500" y="528" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Interaction Module (互動邏輯)</text>
+    <text x="500" y="550" text-anchor="middle" font-size="12" font-weight="500" fill="#1d4ed8">• 點擊事件排查  • RiskModal 彈窗題目</text>
+  </g>
+
+  <line x1="500" y1="570" x2="500" y2="594" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+
+  <g filter="url(#shadow)">
+    <rect x="370" y="600" width="260" height="85" rx="14" fill="url(#moduleGrad)" stroke="#93c5fd" stroke-width="1" />
+    <text x="500" y="625" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Game Logic Module (遊戲機制)</text>
+    <text x="500" y="647" text-anchor="middle" font-size="12" font-weight="500" fill="#1d4ed8">• Score 計分與提示扣分機制</text>
+    <text x="500" y="665" text-anchor="middle" font-size="12" font-weight="500" fill="#1d4ed8">• 進度動態追蹤  • SceneTimer 獨立計時</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="110" y="445" width="220" height="205" rx="18" fill="url(#contextGrad)" stroke="#818cf8" stroke-width="1.5" />
+    <text x="220" y="480" text-anchor="middle" font-size="15" font-weight="800" fill="#312e81">GameContext</text>
+    <text x="220" y="502" text-anchor="middle" font-size="13" font-weight="700" fill="#4338ca">( 全域狀態管理中心 )</text>
+    
+    <rect x="125" y="525" width="190" height="105" rx="10" fill="#ffffff" fill-opacity="0.6" />
+    <text x="140" y="548" font-size="12" font-weight="600" fill="#312e81">• 統籌跨頁面狀態與數據</text>
+    <text x="140" y="568" font-size="12" font-weight="600" fill="#312e81">• 儲存已通關關卡、分數</text>
+    <text x="140" y="598" font-size="11" font-weight="500" fill="#6366f1" font-style="italic">透過 &lt;GameProvider&gt;</text>
+    <text x="140" y="613" font-size="11" font-weight="500" fill="#6366f1" font-style="italic">向全站模組進行單向資料流共享</text>
+  </g>
+
+  <path d="M 370 642 L 340 642 M 340 642 L 340 550 L 332 550" stroke="#818cf8" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <path d="M 220 445 L 220 385 L 334 385" stroke="#818cf8" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+
+  <line x1="400" y1="710" x2="400" y2="752" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrow)" />
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="760" width="640" height="145" rx="24" fill="url(#dataGrad)" stroke="#a7f3d0" stroke-width="2" />
+    <text x="110" y="795" font-size="16" font-weight="800" fill="#064e3b" letter-spacing="0.5">資料層（Data Layer）</text>
+  </g>
+
+  <g fill="#ffffff" stroke="#34d399" stroke-width="1" filter="url(#innerShadow)">
+    <rect x="120" y="815" width="260" height="70" rx="12" />
+  </g>
+  <text x="140" y="840" font-size="13" font-weight="700" fill="#065f46">Excel 題庫 (DataSet.xlsx)</text>
+  <text x="140" y="865" font-size="11" font-weight="500" fill="#047857">• 題目內容、隨機選項、正誤解析說明</text>
+  <text x="140" y="880" font-size="11" font-weight="500" fill="#047857">• 互動 Hotspot 畫布百分比座標與懸停標籤</text>
+
+  <g fill="#ffffff" stroke="#34d399" stroke-width="1" filter="url(#innerShadow)">
+    <rect x="420" y="815" width="260" height="70" rx="12" />
+  </g>
+  <text x="440" y="840" font-size="13" font-weight="700" fill="#065f46">Data Loader (讀取模組)</text>
+  <text x="440" y="865" font-size="11" font-weight="500" fill="#047857">• 基於 xlsx 核心套件解析試算表二進制資料</text>
+  <text x="440" y="880" font-size="11" font-weight="500" fill="#047857">• 整合 Fisher-Yates 演算法隨機洗牌題目選項</text>
+
+  <line x1="380" y1="850" x2="414" y2="850" stroke="#34d399" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#arrow)" />
+  
+  <path d="M 550 815 L 550 740 L 250 740 L 250 653" stroke="#10b981" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+
+</svg>
