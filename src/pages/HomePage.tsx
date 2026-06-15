@@ -77,7 +77,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onStart }) => {
       </motion.div>
 
       <footer className="w-full text-center text-slate-400 text-sm mt-auto pt-8 pb-4 z-10">
-        © 2026 互動式資安風險管理團隊 | Designed by 顏均慈、傅紹宸、吳重毅
+        © 2026 互動式資安風險管理團隊 | Designed by 顏均慈、賴又禎
       </footer>
     </div>
   );
