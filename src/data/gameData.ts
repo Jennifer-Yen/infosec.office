@@ -7,9 +7,9 @@ export const SCENES: Scene[] = [
     id: 'entrance',
     name: '公司出入口 Entrance',
     description: '這裡是公司的第一道防線，觀察人員進出是否有可疑之處。',
-    image: '/pictures/entrance.png',
+    image: '/pictures/entrance_background.png',
     thumbnail: '/pictures/entrance.png',
-    hotspots: [] // 💡 已清空
+    hotspots: [] 
   },
   {
     id: 'public',
@@ -17,15 +17,15 @@ export const SCENES: Scene[] = [
     description: '人員頻繁流動的區域，資訊安全風險也相對較高，需特別留意。',
     image: '/pictures/public.png',
     thumbnail: '/pictures/public.png',
-    hotspots: [] // 💡 已清空
+    hotspots: [] 
   },
   {
     id: 'personal',
     name: '個人辦公區 Personal Area',
     description: '員工最常待的地方，充滿了日常容易忽略的資安細節。',
-    image: '/pictures/personal.png',
+    image: '/pictures/personal_background.png',
     thumbnail: '/pictures/personal.png',
-    hotspots: [] // 💡 已清空
+    hotspots: []
   }
 ];
 
@@ -73,7 +73,8 @@ export async function fetchRiskQuestions(): Promise<RiskQuestion[]> {
       y: row.y !== undefined ? Number(row.y) : 0.5,
       width: row.width !== undefined ? Number(row.width) : 0.1,
       height: row.height !== undefined ? Number(row.height) : 0.1,
-      label: row.label ? String(row.label) : String(row.title)
+      label: row.label ? String(row.label) : String(row.title),
+      objectImage: row.objectImage ? String(row.objectImage) : undefined
     }));
   } catch (error) {
     console.error("讀取 DataSet.xlsx 失敗，回傳空陣列：", error);

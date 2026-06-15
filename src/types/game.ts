@@ -16,12 +16,14 @@ export interface RiskQuestion {
   knowledgeTip: string;
   completedText: string;
 
+
   // 🎯 核心修改：讓每一題從 Excel 讀出來時，都能直接帶有自己的熱點座標與標籤
   x: number;      // 0 ~ 1 的純數值
   y: number;      // 0 ~ 1 的純數值
   width: number;  // 0 ~ 1 的純數值
   height: number; // 0 ~ 1 的純數值
   label: string;  // 熱點懸停時顯示的文字
+  objectImage?: string;
 }
 
 export interface Hotspot {
@@ -31,6 +33,7 @@ export interface Hotspot {
   width: number; // 0 to 1
   height: number; // 0 to 1
   label?: string;
+  objectImage?: string;
 }
 
 export interface Scene {

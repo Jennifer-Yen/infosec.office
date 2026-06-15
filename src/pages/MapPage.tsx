@@ -77,7 +77,7 @@ export const MapPage: React.FC<MapPageProps> = ({ onSelectScene, onBack, onCompl
                 <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.2 }}>
                   <div className="h-52 overflow-hidden relative">
                     <img
-                      src={scene.image}
+                      src={scene.thumbnail}
                       alt={scene.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />

@@ -71,7 +71,8 @@ export const ScenePage: React.FC<ScenePageProps> = ({ sceneId, onBack }) => {
     y: q?.y !== undefined ? Number(q.y) : 0.5,
     width: q?.width !== undefined ? Number(q.width) : 0.1,
     height: q?.height !== undefined ? Number(q.height) : 0.1,
-    label: q?.label || '未命名風險點'
+    label: q?.label || '未命名風險點',
+    objectImage: q?.objectImage
   }));
 
   const currentQuestion = questions.find(q => q.id === selectedRiskId);
